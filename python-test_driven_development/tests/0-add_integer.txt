@@ -32,3 +32,8 @@ Traceback (most recent call last):
 ...
     raise TypeError("b must be an integer")
 TypeError: b must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
