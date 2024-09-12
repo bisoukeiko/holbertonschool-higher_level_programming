@@ -41,4 +41,15 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 >>> add_integer(float('nan'), 0)
 Traceback (most recent call last):
 ...
-NameError: name 'add_integer' is not defined
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(school, 4)
+Traceback (most recent call last):
+...
+NameError: name 'school' is not defined
+
+>>> add_integer(float('inf'), 0)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
