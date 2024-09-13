@@ -1,0 +1,24 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+>>> text_indentation("abcd. efg,hij: klmn.opqrst? uvwxyz")
+abcd.
+
+efg,hij:
+
+klmn.
+
+pqrst?
+
+uvwxyz
+
+
+>>> text_indentation(10)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+
+>>> text_indentation()
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
