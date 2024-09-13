@@ -24,12 +24,14 @@
 
 >>> matrix = []
 >>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
 >>> matrix = [1, 2, 3]
 >>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
@@ -43,6 +45,7 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix = [[1, 2, 3],[4, 5, "6"]]
 >>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
@@ -83,6 +86,7 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix = [[1, 2, 3],[4, 5, 6]]
 >>> matrix_divided(matrix)
+Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
