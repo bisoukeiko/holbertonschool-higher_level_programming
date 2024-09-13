@@ -20,8 +20,8 @@ def text_indentation(text):
     index = 0
     while index < len(text):
 
-        if text[index] == " "
-        and (index == 0 or text[index - 1] in [".", "?", ":"]):
+        if text[index] == " " and \
+          (index == 0 or text[index - 1] in [".", "?", ":"]):
             index += 1
             continue
 
