@@ -25,3 +25,23 @@ class TestMaxInteger(unittest.TestCase):
         test_list = []
         expected_value = None
         self.assertEqual(max_integer(test_list), expected_value)
+
+    def test_max_at_the_beginning(self):
+        test_list = [4, 2, 1, 3]
+        expected_value = 4
+        self.assertEqual(max_integer(test_list), expected_value)
+
+    def test_one_negative_number_list(self):
+        test_list = [-4, 2, 1, 3]
+        expected_value = 3
+        self.assertEqual(max_integer(test_list), expected_value)
+
+    def test_one_negative_number_list(self):
+        test_list = [-4, 2, 1, 3]
+        expected_value = 3
+        self.assertEqual(max_integer(test_list), expected_value)
+
+    def test_only_negative_number_list(self):
+        test_list = [-4, -2, -1, -3]
+        expected_value = -1
+        self.assertEqual(max_integer(test_list), expected_value)
