@@ -117,7 +117,7 @@ Write a class Rectangle that defines a rectangle by: (based on 2-rectangle.py)
         if width or height is equal to 0, return an empty string
     You are not allowed to import any module
 
-````
+```
 guillaume@ubuntu:~/$ cat 3-main.py
 #!/usr/bin/python3
 Rectangle = __import__('3-rectangle').Rectangle
