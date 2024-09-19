@@ -21,8 +21,8 @@ class Rectangle:
             height(int): The height of the rectangle.
 
         Attributes:
-            __width(int): The width of the rectangle.
-            __height(int): The height of the rectangle.
+            width(int): The width of the rectangle.
+            height(int): The height of the rectangle.
         """
         self.height = height
         self.width = width
@@ -100,7 +100,7 @@ class Rectangle:
             rectangle perimeter
         """
 
-        if self.__width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         else:
             return self.__width * 2 + self.__height * 2
