@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """ Define an abstract class and two subclasses of Shape """
-from abc import ABCMeta, abstractclassmethod
+from abc import ABCMeta, abstractmethod
 import math
 
 
 class Shape(metaclass=ABCMeta):
     """ Define the Shape class """
 
-    @abstractclassmethod
+    @abstractmethod
     def area(self):
         pass
 
-    @abstractclassmethod
+    @abstractmethod
     def perimeter(self):
         pass
 
