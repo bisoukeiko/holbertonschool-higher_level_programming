@@ -2,9 +2,6 @@
 """ Define a class VerboseList that extends the Python list class """
 
 
-from typing import Iterable, SupportsIndex
-
-
 class VerboseList(list):
     """ Define a class VerboseList that inherits from
         the built-in list class
