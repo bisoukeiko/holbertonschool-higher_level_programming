@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ Define an abstract class and two subclasses of Animal """
 from abc import ABCMeta, abstractmethod
 
