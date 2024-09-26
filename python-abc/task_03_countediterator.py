@@ -11,7 +11,6 @@ class CountedIterator:
         """ Instantiation """
         self.count = 0
         self.iterator = iter(some_iterable)
-        self.len = len(some_iterable)
 
     def __iter__(self):
         """ Returns the iterator object itself.
@@ -25,16 +24,16 @@ class CountedIterator:
         """ Returns the next item from the iterator.
 
             Raises:
-                StopIteration: If there are no more items to iterate.
+                StopIteration: If there are no items left to iterate.
 
             Returns:
                 object: The next item from the iterator.
         """
-        self.count += 1
-        if self.count > self.len:
+        try:
+            self.count += 1
+            return next(self.iterator)
+        except StopIteration:
             raise StopIteration
-
-        return next(self.iterator)
 
     def get_count(self):
         """ returns the current value of the counter """
