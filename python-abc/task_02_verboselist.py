@@ -27,7 +27,9 @@ class VerboseList(list):
 
     def pop(self, index=-1):
         """ popping the item from the list """
-        if index >= -1 and index < len(self):
+        if not self:
+            raise IndexError("list is empty.")
+        elif index >= -1 and index < len(self):
             print("Popped [{}] from the list.".format(self[index]))
             super().pop(index)
         else:
