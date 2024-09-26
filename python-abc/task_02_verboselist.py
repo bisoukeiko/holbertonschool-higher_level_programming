@@ -22,9 +22,13 @@ class VerboseList(list):
         if value in self:
             print("Removed [{}] from the list".format(value))
             super().remove(value)
+        else:
+            raise ValueError("[{}] not in list".format(value))
 
     def pop(self, index=-1):
         """ popping the item from the list """
         if index >= -1 and index < len(self):
             print("Popped [{}] from the list.".format(self[index]))
             super().pop(index)
+        else:
+            raise IndexError("list index[{}] out of range".format(index))
