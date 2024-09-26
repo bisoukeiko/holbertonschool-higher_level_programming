@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 """ Define an abstract class and two subclasses of Shape """
-from abc import ABC, abstractmethod
-from math import pi
+from abc import ABCMeta, abstractmethod
+import math
 
 
-class Shape(ABC):
+class Shape(metaclass=ABCMeta):
     """ Define the Shape class """
 
     @abstractmethod
     def area(self):
-        """ Abstract method to calculate the area of the shape. """
         pass
 
     @abstractmethod
     def perimeter(self):
-        """ Abstract method to calculate the perimeter of the shape. """
         pass
 
 
@@ -23,15 +21,15 @@ class Circle(Shape):
 
     def __init__(self, radius):
         """ Instantiation radius """
-        self.__radius = radius
+        self.radius = radius
 
     def area(self):
         """ Return the area of the circle """
-        return self.__radius ** 2 * pi
+        return self.radius ** 2 * math.pi
 
     def perimeter(self):
         """ Return the perimeter of the circle """
-        return abs(self.__radius) * 2 * pi
+        return self.radius * 2 * math.pi
 
 
 class Rectangle(Shape):
@@ -39,16 +37,16 @@ class Rectangle(Shape):
 
     def __init__(self, width, height):
         """ Instantiation width and height """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     def area(self):
         """ Return the area of the rectangle """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         """ Return the perimeter of the rectangle """
-        return (self.__width * 2) + (self.__height * 2)
+        return (self.width * 2) + (self.height * 2)
 
 
 def shape_info(obj):
