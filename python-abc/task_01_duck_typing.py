@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ Define an abstract class and two subclasses of Shape """
 from abc import ABC, abstractmethod
-import math
+from math import pi
 
 
 class Shape(ABC):
@@ -27,11 +27,11 @@ class Circle(Shape):
 
     def area(self):
         """ Return the area of the circle """
-        return self.__radius ** 2 * math.pi
+        return self.__radius ** 2 * pi
 
     def perimeter(self):
         """ Return the perimeter of the circle """
-        return self.__radius * 2 * math.pi
+        return self.__radius * 2 * pi
 
 
 class Rectangle(Shape):
