@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """ Define an abstract class and two subclasses of Shape """
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 import math
 
 
-class Shape(metaclass=ABCMeta):
+class Shape(ABC):
     """ Define the Shape class """
 
     @abstractmethod
@@ -50,6 +50,6 @@ class Rectangle(Shape):
 
 
 def shape_info(obj):
-    """ call area and perimeter methods of the passed object """
+    """ Print the area and perimeter of the shape passed to the function """
     print("Area: {}".format(obj.area()))
     print("Perimeter: {}".format(obj.perimeter()))
