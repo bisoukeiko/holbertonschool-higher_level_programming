@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-
+"""
+    RESTful API - task03
+"""
 from http.server import HTTPServer
 from http.server import BaseHTTPRequestHandler
 import json
 
 
 class CustomHTTPRequestHandler(BaseHTTPRequestHandler):
+    """ Define the class that inherits BaseHTTPRequestHandler
+        this class handles different endpoints
+    """
 
     def do_GET(self):
 
