@@ -54,7 +54,7 @@ def add_user():
         "user": users[post_data["username"]]
     }
 
-    return jsonify(return_message)
+    return jsonify(return_message), 201
 
 
 if __name__ == "__main__":
