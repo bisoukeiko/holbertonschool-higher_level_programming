@@ -6,8 +6,17 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-users = {}
-
+users = {
+    "jane": {
+        "username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"
+    },
+    "john": {
+        "username": "john", "name": "John", "age": 32, "city": "New York"
+    },
+    "ana": {
+        "username": "ana", "name": "Ana", "age": 24, "city": "San Francisco"
+    }
+}
 
 @app.route("/")
 def home():
@@ -26,12 +35,12 @@ def status():
 
 
 @app.route("/users/<username>")
-def get_users(username):
+def get_user(username):
 
     if username in users:
         return jsonify(users[username])
     else:
-        return jsonify({"error": "User not found"}), 400
+        return jsonify({"error": "User not found"}), 404
 
 
 @app.route("/add_user", methods=['POST'])
