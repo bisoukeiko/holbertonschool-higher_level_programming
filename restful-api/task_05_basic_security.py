@@ -1,4 +1,4 @@
-#!/user/bin/env/python3
+#!/usr/bin/python3
 """
     RESTful API - task05
 """
@@ -41,11 +41,6 @@ def verify_password(username, password):
     if username in users and \
             check_password_hash(users.get(username)["password"], password):
         return username
-
-
-@app.route("/")
-def home():
-    return "Welcome to the Flask API!"
 
 
 @app.route("/basic-protected", methods=["GET"])
