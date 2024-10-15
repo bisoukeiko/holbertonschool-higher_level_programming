@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """
     RESTful API - task05
 """
@@ -17,6 +16,7 @@ from flask_jwt_extended import JWTManager
 
 app = Flask(__name__)
 
+app.config['SECRET_KEY'] = 'your_secret_key'
 app.config["JWT_SECRET_KEY"] = "super-secret"
 
 auth = HTTPBasicAuth()
