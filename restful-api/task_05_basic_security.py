@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/user/bin/env/python3
 """
     RESTful API - task05
 """
