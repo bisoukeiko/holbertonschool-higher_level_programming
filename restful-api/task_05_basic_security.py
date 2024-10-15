@@ -17,7 +17,7 @@ from flask_jwt_extended import JWTManager
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'your_secret_key'
-app.config['JWT_SECRET_KEY'] = "super-secret"
+app.config['JWT_SECRET_KEY'] = 'super-secret'
 
 auth = HTTPBasicAuth()
 jwt = JWTManager(app)
@@ -64,7 +64,7 @@ def login():
 
         return jsonify(access_token=access_token)
     else:
-        return jsonify({'msg': 'Bad username or password'}), 401
+        return jsonify({'error': 'Invalid credentials'}), 401
 
 
 @app.route('/jwt-protected', methods=['GET'])
