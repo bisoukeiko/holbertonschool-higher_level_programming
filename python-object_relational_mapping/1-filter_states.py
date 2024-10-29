@@ -22,7 +22,10 @@ def main():
                          passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE SUBSTRING(name, 1, 1) = BINARY 'N' ORDER BY id ASC;")
+    cur.execute("SELECT * \
+                   FROM states \
+                  WHERE SUBSTRING(name, 1, 1) = BINARY 'N' \
+               ORDER BY id ASC;")
     query_rows = cur.fetchall()
 
     for row in query_rows:
