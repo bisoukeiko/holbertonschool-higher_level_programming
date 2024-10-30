@@ -40,4 +40,8 @@ def main():
 
 
 if __name__ == "__main__":
+    """
+    This conditional block checks if the current script is
+    being run as the main program.
+    """
     main()
