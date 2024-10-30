@@ -25,10 +25,10 @@ def main():
 
     name = sys.argv[4]
 
-    cur.execute("SELECT * \
+    cur.execute("""SELECT id, name \
                    FROM states \
                   WHERE name = %s \
-               ORDER BY id ASC", (name,))
+               ORDER BY id ASC;""", (name,))
 
     query_rows = cur.fetchall()
 
