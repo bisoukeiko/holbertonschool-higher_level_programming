@@ -28,7 +28,7 @@ def main():
 
     cur.execute("SELECT id, name \
                    FROM states \
-                  WHERE name = '{}' \
+                  WHERE BINARY name = '{}' \
                ORDER BY id ASC;".format(state_name))
 
     query_rows = cur.fetchall()
