@@ -46,8 +46,10 @@ def main():
         if index != (len(query_rows) - 1):
             print(row[0], end=", ")
         else:
-            print(row[0])
+            print(row[0], end="")
         index += 1
+
+    print()
 
     cur.close()
     db.close()
