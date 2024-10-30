@@ -25,7 +25,7 @@ def main():
 
     parameter = (sys.argv[4],)
 
-    query = f"SELECT id, name \
+    query = "SELECT id, name \
                    FROM states \
                   WHERE BINARY name = %s \
                ORDER BY id ASC;"
