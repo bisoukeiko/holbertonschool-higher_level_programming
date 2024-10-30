@@ -24,15 +24,14 @@ def main():
 
     cur = db.cursor()
 
-    name = sys.argv[4]
+    state_name = sys.argv[4]
 
     cur.execute("""SELECT id, name \
                    FROM states \
                   WHERE name = %s \
-               ORDER BY id ASC;""", (name,))
+               ORDER BY id ASC;""", (state_name,))
 
     query_rows = cur.fetchall()
-
     for row in query_rows:
         print(row)
 
