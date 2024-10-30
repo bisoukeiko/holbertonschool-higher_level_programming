@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" Python - Object-relational mapping
-    task02:
+""" task02:
+    takes in an argument and displays all values in the states table
+    of hbtn_0e_0_usa where name matches the argument
 """
 import MySQLdb
 import sys
@@ -40,8 +41,4 @@ def main():
 
 
 if __name__ == "__main__":
-    """
-    This conditional block checks if the current script is
-    being run as the main program.
-    """
     main()
