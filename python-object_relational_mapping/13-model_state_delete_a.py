@@ -27,8 +27,6 @@ def main():
     session = SessionClass()
 
     session.query(State).filter(State.name.like('%a%')).delete()
-    # state = session.query(State).filter(State.name.like('%a%')).delete()
-    # state.name = 'New Mexico'
     session.commit()
 
     session.close()
