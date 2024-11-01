@@ -27,7 +27,7 @@ def main():
     SessionClass = sessionmaker(engine)
     session = SessionClass()
 
-    results = session.query(State).order_by(State.id).all()
+    results = session.query(State).order_by(State.id)
 
     for state in results:
         print("{}: {}".format(state.id, state.name))
