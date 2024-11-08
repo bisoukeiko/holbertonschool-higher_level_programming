@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Items List</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <h1>Items List</h1>
+    <p>This is a simple Items List.</p>
+
+    {% if items %}
+    {% for item in items %}
+        <ul>
+            <li>{{ item }}</li>
+        </ul>
+    {% endfor %}
+    {% else %}
+        <li>No items found</li>
+    {% endif %}
+
+    {% include 'footer.html' %}
+</body>
+</html>
